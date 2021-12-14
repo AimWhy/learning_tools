@@ -107,26 +107,6 @@
 {"level":"debug","ts":1639453664.7402549,"caller":"example/main.go:33","msg":"test","traceId":"68867b89-c949-45a4-b325-86866c9f869a"}
 ```
 
-
-
-# go_push 一个实用的消息推送服务
-
-### [go_push](https://github.com/hwholiday/learning_tools/tree/master/go_push) (推送服务)
-
-    ```base
-    ├── gateway // 长连接网关服务器
-    │   ├── push_job.go    // 分发任务
-    │   ├── room.go        // 房间，可作为某一类型的推送管理中心
-    │   ├── room_manage.go // 房间管理
-    │   ├── ws_conn.go     // 简单封装的websocket方法
-    │   ├── ws_handle.go   // 处理websocket协议方法
-    │   └── ws_server.go   // websocket服务
-    ├── logic  //逻辑服务器    
-    │   ├── http_handle.go // 推送，房间相关
-    │   └── http_server.go // http服务
-    └── main.go
-    ```
-
 ### [HConf (基于etcd与viper的高可用配置中心)](https://github.com/hwholiday/learning_tools/tree/master/hconf)
 
 - 可使用远程与本地模式
@@ -154,6 +134,26 @@ if err := r.Run(); err != nil {
 t.Log(conf)
 t.Log(r.Close())
 ```
+
+# go_push 一个实用的消息推送服务
+
+### [go_push](https://github.com/hwholiday/learning_tools/tree/master/go_push) (推送服务)
+
+    ```base
+    ├── gateway // 长连接网关服务器
+    │   ├── push_job.go    // 分发任务
+    │   ├── room.go        // 房间，可作为某一类型的推送管理中心
+    │   ├── room_manage.go // 房间管理
+    │   ├── ws_conn.go     // 简单封装的websocket方法
+    │   ├── ws_handle.go   // 处理websocket协议方法
+    │   └── ws_server.go   // websocket服务
+    ├── logic  //逻辑服务器    
+    │   ├── http_handle.go // 推送，房间相关
+    │   └── http_server.go // http服务
+    └── main.go
+    ```
+
+
 
 ### [HEvent (基于channel )](https://github.com/hwholiday/learning_tools/tree/master/hevent)
     1: 基于channel的简单事件订阅发布
